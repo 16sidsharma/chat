@@ -1,0 +1,49 @@
+.login{
+    width: 317px;
+    height: 396px;
+    left: 29px;
+    top: 208px;
+    background: rgba(255, 255, 255, 0.38);
+    border: 2px solid #FFFFFF;
+    border-radius: 16px;
+    margin: 0 auto;
+    padding: 15px;
+    margin-top: 150px;
+}
+.input{
+    background: #FFFFFF;
+mix-blend-mode: normal;
+backdrop-filter: blur(20px);
+/* Note: backdrop-filter has minimal browser support */
+margin: 10px 0px;
+border-radius: 8px;
+padding: 10px 15px;
+}
+h3{
+    margin: 30 auto;
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.mt-4{
+    margin-top: 40px;
+}
+ion-button{
+    box-shadow: 0px 2.767256498336792px 2.2138051986694336px 0px #9378FF05;
+
+box-shadow: 0px 6.650102138519287px 5.32008171081543px 0px #9378FF07;
+
+box-shadow: 0px 12.521552085876465px 10.017241477966309px 0px #9378FF09;
+
+box-shadow: 0px 22.3363094329834px 17.869047164916992px 0px #9378FF0B;
+
+box-shadow: 0px 41.777610778808594px 33.422088623046875px 0px #9378FF0D;
+
+box-shadow: 0px 100px 80px 0px #9378FF12;
+height: 39px;
+}
+
+p{
+    font-size: 15px;
+line-height: 21px;
+}

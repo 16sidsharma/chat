@@ -24,3 +24,56 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../src/assets/default.png');
+
+}
+.bg1{
+    background-image: url('../src/assets/default.png');
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+.bg2{
+    background-image: url('../src/assets/2.png');
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+.bg3{
+    background-image: url('../src/assets/3.png');
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+.bg4{
+    background-image: url('../src/assets/1.png');
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+
+body{
+    position: relative;
+}
+button{
+    background: #2675EC;
+    padding: 0px 79px;
+    height: 45px;
+    border-radius: 44px;
+    color: #ffff;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  box-shadow: 0px 19px 65px -15px #2675ec;
+  width: 100%;
+  }
+  button:hover{
+    background: #1a63cf;
+  }
