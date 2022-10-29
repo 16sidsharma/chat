@@ -7,10 +7,13 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginPipe } from './login.pipe';
+import { OnePagePipe } from './one-page.pipe';
+import { IvyGalleryModule } from 'angular-gallery';
 
 @NgModule({
-  declarations: [AppComponent, LoginPipe],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  declarations: [AppComponent, LoginPipe, OnePagePipe],
+    
+    imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,IvyGalleryModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

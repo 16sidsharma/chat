@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { GalleryPage } from '../gallery/gallery.page';
 
 @Component({
   selector: 'app-chats',
   templateUrl: './chats.page.html',
-  styleUrls: ['./chats.page.scss'],
+  styleUrls: ['./chats.page.scss'], 
 })
 export class ChatsPage implements OnInit {
 

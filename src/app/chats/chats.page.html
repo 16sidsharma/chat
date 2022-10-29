@@ -20,7 +20,9 @@
   </ul>
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane  fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-      
+     <div class="contain p-2"> <app-gallery></app-gallery></div>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
       <div class="contain p-2">
         <div class="d-flex">
           <h3 class="text-medium">Pinned Chats</h3>
@@ -39,7 +41,24 @@
           </ul>
         </div>
     </div>
-    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">..fdihghiog.</div>
-    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">..fiohh.</div>
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+      <div class="contain p-2">
+        <div class="d-flex">
+          <h3 class="text-medium">Pinned Chats</h3>
+          <div class="search">
+           <img src="../../assets/search.png" alt="">
+          </div>
+        </div>
+          <ul *ngFor="let c of count">
+            <li class="mb-3">
+              <div class="list">
+                <div class="pimg">G <div class="active"></div></div>
+                <div class="name"><h4>Guest 765</h4><p>Why did you do that? </p></div>
+                <div class="time"><p>12:30</p><div class="badge2">2</div></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+    </div>
   </div>
 </ion-content>

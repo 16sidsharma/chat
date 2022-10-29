@@ -4,18 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ChatsPageRoutingModule } from './chats-routing.module';
+import { OnePagePageRoutingModule } from './one-page-routing.module';
 
-import { ChatsPage } from './chats.page';
-import { GalleryPage } from '../gallery/gallery.page';
+import { OnePagePage } from './one-page.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ChatsPageRoutingModule
+    OnePagePageRoutingModule
   ],
-  declarations: [ChatsPage,GalleryPage]
+  declarations: [OnePagePage]
 })
-export class ChatsPageModule {}
+export class OnePagePageModule {}

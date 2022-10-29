@@ -1,5 +1,6 @@
  
 import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -26,8 +27,9 @@ export class AppComponent {
  
 
 
-  constructor(private renderer:Renderer2) {
-   this.setDefault()
+  constructor(private renderer:Renderer2,private route:ActivatedRoute) {
+   this.setDefault();
+   
   }
   colors:any = [
     {id:1,name:"dark"},

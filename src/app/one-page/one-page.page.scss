@@ -1,0 +1,254 @@
+.appli-head {
+  width: 100%;
+  height: 65px;
+  background: rgba(255, 255, 255, 0.53);
+  border: 1px solid #FFFFFF;
+  margin-bottom: 20px;
+
+}
+
+.app-hed {
+  display: flex;
+  list-style: none;
+  height: 65px;
+
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+
+  .list {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    // flex-direction: column;
+    align-items: center;
+  }
+
+  .pimg {
+    background: rgba(255, 255, 255, 0.36);
+    border: 1px solid #ECECEC;
+    border-radius: 37.5px;
+    color: #2675EC;
+
+    span {
+      width: 3px;
+      height: 3px;
+      background-color: blue;
+      border: 1px solid #fff;
+      border-radius: 50%;
+    }
+  }
+
+  .time {
+    p {
+      color: #848484;
+    }
+
+    .badge {
+      width: 3px;
+      height: 3px;
+      background-color: #FAAD3C;
+      border: 1px solid #fff;
+      border-radius: 50%;
+    }
+  }
+
+  .list {
+    display: flex;
+    list-style: none;
+    justify-content: left;
+    // flex-direction: column;
+
+  }
+
+  .pimg {
+    background: rgba(255, 255, 255, 0.36);
+    border: 1px solid #ECECEC;
+    border-radius: 37.5px;
+    margin-right: 10px;
+
+    span {
+      width: 3px;
+      height: 3px;
+      background-color: blue;
+      border: 1px solid #fff;
+      border-radius: 50%;
+    }
+  }
+
+  .time {
+    p {
+      color: #848484;
+      margin-bottom: 10px;
+
+    }
+
+    .badge {
+      width: 3px;
+      height: 3px;
+      background-color: #FAAD3C;
+      border: 1px solid #fff;
+      border-radius: 50%;
+    }
+  }
+}
+
+.split-pane-side {
+  display: none !important;
+}
+
+.pimg {
+  width: 56px;
+  height: 54.85px;
+  border-radius: 50%;
+  font-size: 16px;
+  text-align: center;
+  color: #ECECEC;
+  padding-top: 15px;
+  position: relative;
+
+  .active {
+    width: 9px;
+    height: 9px;
+    background-color: #2675EC;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 1;
+    right: 3px;
+
+  }
+}
+
+ion-icon {
+  color: #2675EC;
+}
+
+.name {
+  h4 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: -0.165px;
+
+    color: #131313;
+  }
+
+  p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height */
+    margin-bottom: 11px;
+    text-align: center;
+    letter-spacing: -0.165px;
+
+    color: #C4C4C4;
+  }
+}
+
+.ne3 {
+  width: 80%;
+  padding: 10px 10px;
+  text-align: left;
+}
+
+.messages {
+  position: relative;
+padding: 10px;
+  .in {
+    background: #3CF9C0;
+    border-radius: 35px 35px 35px 10px;
+    width: 80%;
+    margin-bottom: 20px;
+    padding: 10px;
+    float: left;
+    color: #fff;
+
+    .user {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 156%;
+      /* or 19px */
+
+      letter-spacing: -0.165px;
+
+      color: #FFFFFF;
+    }
+
+    p {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 156%;
+      /* or 25px */
+
+      letter-spacing: -0.165px;
+
+      color: #FFFFFF;
+    }
+  }
+
+  .out {
+    width: 80%;
+    background: #F6F6F6;
+    border-radius: 35px 10px 35px 35px;
+    color: #000;
+    float: right;
+    margin-bottom: 20px;
+
+    p {
+      color: #000;
+      padding: 10px;
+    }
+  }
+}
+
+p {
+  margin: 0px;
+}
+h6{
+    margin-top: none;
+}
+.appi-footer{
+    background-color: #fff;
+    padding:20px 15px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+.sendMessage{
+    background-color: #FAFAFA;
+    border-radius: 30px;
+width: 100%;
+display: flex;
+justify-content: space-between;
+padding: 10px 0px;
+    input{
+        width: 60%;
+        padding: 10px;
+        border: none;
+        color: #848484;
+        background-color: transparent;
+    }
+    .icons{
+        display: flex;
+        ion-icon{
+            margin:10px ;
+            color: #3CF9C0;
+        }
+    }
+}
+}
+.d-nones{
+    display: none;
+}
