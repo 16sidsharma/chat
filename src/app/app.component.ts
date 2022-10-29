@@ -1,6 +1,7 @@
  
 import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -17,7 +18,7 @@ export class AppComponent {
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
  
-
+  headerOff:boolean =false;
   defaultTheme="light";
   dark:boolean;
   light:boolean;
@@ -27,9 +28,14 @@ export class AppComponent {
  
 
 
-  constructor(private renderer:Renderer2,private route:ActivatedRoute) {
+  constructor(private renderer:Renderer2,private router:Router,private location:Location) {
    this.setDefault();
-   
+  console.log ("ded",this.router.url)
+  }
+  ngOnInit(){
+    if(this.location.path()==="/one-page"){
+    this.headerOff =true;
+    }
   }
   colors:any = [
     {id:1,name:"dark"},

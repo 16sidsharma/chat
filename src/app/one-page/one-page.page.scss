@@ -1,16 +1,42 @@
 .appli-head {
   width: 100%;
-  height: 65px;
+  height: 75px;
   background: rgba(255, 255, 255, 0.53);
   border: 1px solid #FFFFFF;
   margin-bottom: 20px;
 
-}
+  .inner-scroll{
+    background: rgba(177, 172, 172, 0.19);
+border: 1px solid #DEDEDE;
+backdrop-filter: blur(21.5px);
+/* Note: backdrop-filter has minimal browser support */
 
+border-radius: 13px;
+color: #fff;
+  }
+ 
+
+}
+.pop{
+    list-style: none;
+    background: rgb(247 235 235 / 51%);
+    border: 1px solid #DEDEDE;
+    backdrop-filter: blur(21.5px);
+    /* Note: backdrop-filter has minimal browser support */
+    margin: 0;
+    border-radius: 13px;
+    li{
+        padding: 15px 11px;
+    }
+    
+  }
+  .popover-content{
+    box-shadow: none!important;
+}
 .app-hed {
   display: flex;
   list-style: none;
-  height: 65px;
+  height: 75px;
 
   justify-content: space-around;
   align-items: center;
@@ -219,6 +245,15 @@ p {
 h6{
     margin-top: none;
 }
+.modal-rating{
+  
+background: #FFFFFF;
+border-radius: 63px;
+background: #FFFFFF!important;
+    border-radius: 63px;
+    height: 60%;
+    padding: 30px;
+}
 .appi-footer{
     background-color: #fff;
     padding:20px 15px;
@@ -249,6 +284,25 @@ padding: 10px 0px;
     }
 }
 }
-.d-nones{
-    display: none;
+ion-header ion-toolbar{
+    display: none!important;
+}
+ion-modal .ion-page{
+  background: #fff;
+  border-radius: 50px;
+  padding: 45px 42px;
+  
+}
+ion-textarea{
+  --background: #ececec;
+  --color: rgb(145, 145, 145);
+  --padding-end: 10px;
+  --padding-start: 10px;
+  --placeholder-color: #ddd;
+  --placeholder-opacity: 0.8;
+}
+.rate{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
 }

@@ -33,6 +33,14 @@ const routes: Routes = [
   {
     path: 'one-page',
     loadChildren: () => import('./one-page/one-page.module').then( m => m.OnePagePageModule)
+  },
+  {
+    path: 'notification',
+    loadChildren: () => import('./notification/notification.module').then( m => m.NotificationPageModule)
+  },
+  {
+    path: 'header',
+    loadChildren: () => import('./header/header.module').then( m => m.HeaderPageModule)
   }
  
 ];
