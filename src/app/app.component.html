@@ -30,12 +30,11 @@
           </ion-menu-toggle>
         </ion-list>
 
-        <ion-list id="labels-list">
-          <ion-list-header>Labels</ion-list-header>
-
+        <ion-list id="labels-list" class="selic">
           <ion-select
             placeholder="Select colors"
             (ionChange)="handleChange($event);" 
+            
           >
           <ion-select-option *ngFor="let c of colors" [value]="colors.name">{{ c.name }}</ion-select-option>
           </ion-select>
