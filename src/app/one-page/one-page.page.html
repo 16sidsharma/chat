@@ -26,35 +26,25 @@
 <ion-popover trigger="click-trigger" triggerAction="click">
   <ng-template>
     <ul class="pop">
-      <li>Chat Info</li>
+      <li [routerLink]="['/chat-info']">Chat Info</li>
       <li expand="block" (click)="setOpen(true)">Rate the chat</li>
-      <li data-toggle="modal" data-target="#exampleModal">Leave Chat</li>
-      <li>Report Chat</li>
+      <li id="context-menu-trigger">Leave Chat</li>
+      <li [routerLink]="['/report']">Report Chat</li>
     </ul>
   </ng-template>
 </ion-popover>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
+<ion-popover trigger="context-menu-trigger" triggerAction="context-menu">
+  <ng-template>
+    <p>Are you sure you want to leave chat!</p>
+    <ion-button expand="block" fill="clear" shape="round">
+      Click me
+    </ion-button>
+    <ion-button expand="block" fill="clear" shape="round">
+      Click me
+    </ion-button>
+  </ng-template>
+</ion-popover>
 
 <ion-content>
   <div class="messages">

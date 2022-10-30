@@ -306,3 +306,7 @@ ion-textarea{
   justify-content: space-around;
   margin-bottom: 20px;
 }
+
+ion-popover::part(backdrop) {
+  background-color: transparent;
+}

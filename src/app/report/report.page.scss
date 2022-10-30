@@ -1,0 +1,43 @@
+.card{
+    margin-top: 100px!important;
+    background-color: white;
+    box-shadow: 1px 8px 10px -10px black;
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 20px!important;
+}
+.xdxc{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+    font-family: 'poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height */
+
+display: flex;
+align-items: center;
+letter-spacing: 0.02em;
+
+color: #99879D;
+ion-icon{
+    color: #99879D;
+}
+p{
+    margin: 0px;
+}
+}
+
+ion-item{
+    border-radius: 32px;
+    background-color: #ececec;
+    .item-native{
+        border: none;
+    }
+   
+} .item-bottom{
+    display: none;
+}

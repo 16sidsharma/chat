@@ -49,6 +49,10 @@ const routes: Routes = [
   {
     path: 'all-rateing',
     loadChildren: () => import('./all-rateing/all-rateing.module').then( m => m.AllRateingPageModule)
+  },
+  {
+    path: 'report',
+    loadChildren: () => import('./report/report.module').then( m => m.ReportPageModule)
   }
  
 ];
