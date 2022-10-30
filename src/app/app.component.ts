@@ -19,6 +19,8 @@ export class AppComponent {
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
  
   headerOff:boolean =false;
+  headerOffRating:boolean =true;
+
   defaultTheme="light";
   dark:boolean;
   light:boolean;
@@ -35,6 +37,10 @@ export class AppComponent {
   ngOnInit(){
     if(this.location.path()==="/one-page"){
     this.headerOff =true;
+    }
+   if(this.location.path()==="/all-rateing"){
+      this.headerOffRating = true;
+
     }
   }
   colors:any = [

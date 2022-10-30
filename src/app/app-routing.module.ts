@@ -41,6 +41,14 @@ const routes: Routes = [
   {
     path: 'header',
     loadChildren: () => import('./header/header.module').then( m => m.HeaderPageModule)
+  },
+  {
+    path: 'chat-info',
+    loadChildren: () => import('./chat-info/chat-info.module').then( m => m.ChatInfoPageModule)
+  },
+  {
+    path: 'all-rateing',
+    loadChildren: () => import('./all-rateing/all-rateing.module').then( m => m.AllRateingPageModule)
   }
  
 ];

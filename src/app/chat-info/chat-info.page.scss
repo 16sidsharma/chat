@@ -1,0 +1,108 @@
+.float-left{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height */
+margin: 15px;
+display: flex;
+align-items: center;
+letter-spacing: 0.02em;
+
+color: #99879D;
+}
+
+h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 39.0625px;
+    line-height: 52px;
+    /* identical to box height */
+    
+    
+    color: #120E21;
+    }
+.name{
+    h3{
+        font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 25px;
+line-height: 33px;
+/* identical to box height */
+
+display: flex;
+align-items: center;
+
+color: #120E21;
+    }
+    p{
+        font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+display: flex;
+align-items: center;
+
+color: #99879D;
+    }
+}
+.row{
+    margin: 0px;
+}
+.rate{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  .bt ion-button {
+    --background: #FBEAFF;
+    --background-hover: #9ce0be;
+    --background-activated: #88f4be;
+    --background-focused: #88f4be;
+  
+    --color: #413d42;
+  
+    // --border-radius: 0;
+    // --border-color: #000;
+    // --border-style: solid;
+    // --border-width: 1px;
+  
+    --box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0);
+  
+    --ripple-color: deeppink;
+  
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+  .bt{
+    text-align: right;
+    padding-left: 60px;
+    margin-bottom: 50px;
+
+  }
+  h3{
+    font-weight: 600;
+  }
+  h5{
+    font-size: 14px;
+  }
+  .modal-w{
+    background-color: #fff;
+  }
+  .col-xs-6{
+    width: 50%;
+  }
+  .col-xs-12{
+    width: 100%;
+   
+  }
+  ion-icon{
+    color:#9378FF
+  }
+  

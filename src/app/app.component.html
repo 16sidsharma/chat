@@ -3,7 +3,7 @@
   <div class="bg" #bg></div>
 
   <ion-split-pane contentId="main-content">
-    <ion-menu  *ngIf="!headerOff" contentId="main-content" type="overlay">
+    <ion-menu  *ngIf="!headerOff  || !headerOffRating" contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">  
           <ion-menu-toggle auto-hide="false">
@@ -43,7 +43,7 @@
       
       </ion-content>
     </ion-menu>
-    <ion-header *ngIf="!headerOff"  class="header-hide" [translucent]="true">
+    <ion-header *ngIf="!headerOff  || !headerOffRating"  class="header-hide" [translucent]="true">
       <ion-toolbar>
         <ion-buttons slot="start" class="btn-bread">
         <img src="../assets/Menu.png" alt="" class="menu-bn">

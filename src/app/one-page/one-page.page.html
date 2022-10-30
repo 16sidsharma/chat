@@ -20,19 +20,45 @@
     </li>
   </ul>
 </div>
+
+
+
 <ion-popover trigger="click-trigger" triggerAction="click">
   <ng-template>
     <ul class="pop">
       <li>Chat Info</li>
       <li expand="block" (click)="setOpen(true)">Rate the chat</li>
-      <li>Leave Chat</li>
+      <li data-toggle="modal" data-target="#exampleModal">Leave Chat</li>
       <li>Report Chat</li>
     </ul>
   </ng-template>
 </ion-popover>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <ion-content>
   <div class="messages">
-    <div  class="in">
+    <div class="in">
       <h6 class="user">New User 20:22 PM</h6>
 
       <p>
@@ -53,14 +79,18 @@
     </div>
   </div>
 
+
 </ion-content>
+
+
+
 <div class="appi-footer">
   <div class="sendMessage">
     <input type="text" placeholder="Type your message..." />
-     <div class="icons">
+    <div class="icons">
       <ion-icon size="large" name="add-sharp"></ion-icon>
       <ion-icon size="large" name="happy-sharp"></ion-icon>
-      <ion-icon  hidden name="send-sharp"></ion-icon>
+      <ion-icon hidden name="send-sharp"></ion-icon>
     </div>
   </div>
 </div>
@@ -68,22 +98,23 @@
 
 <!-- modal  -->
 
-<ion-modal [isOpen]="isModalOpen"  #modal trigger="open-modal" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
+<ion-modal [isOpen]="isModalOpen" #modal trigger="open-modal" [initialBreakpoint]="0.25"
+  [breakpoints]="[0, 0.25, 0.5, 0.75]">
   <ng-template>
     <div class="modal-rating">
-    
-<div class="rate">
-  <ion-icon size="large"  name="star-sharp"></ion-icon>
-  <ion-icon size="large" name="star-sharp"></ion-icon>
-  <ion-icon size="large" name="star-sharp"></ion-icon>
 
-  <ion-icon size="large" name="star-sharp"></ion-icon>
+      <div class="rate">
+        <ion-icon size="large" name="star-sharp"></ion-icon>
+        <ion-icon size="large" name="star-sharp"></ion-icon>
+        <ion-icon size="large" name="star-sharp"></ion-icon>
 
-  <ion-icon size="large" name="star-sharp"></ion-icon>
+        <ion-icon size="large" name="star-sharp"></ion-icon>
 
-  
+        <ion-icon size="large" name="star-sharp"></ion-icon>
 
-</div>
+
+
+      </div>
 
       <ion-textarea placeholder="comments"></ion-textarea>
       <button class="mt-4">Submit</button>
@@ -91,3 +122,4 @@
     </div>
   </ng-template>
 </ion-modal>
+
