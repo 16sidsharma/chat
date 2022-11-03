@@ -9,12 +9,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginPipe } from './login.pipe';
 import { OnePagePipe } from './one-page.pipe';
 import { IvyGalleryModule } from 'angular-gallery';
-import { HeaderPage } from './header/header.page';
 
 @NgModule({
-  declarations: [AppComponent, LoginPipe, OnePagePipe,HeaderPage],
-    
-    imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,IvyGalleryModule],
+  declarations: [AppComponent, LoginPipe, OnePagePipe],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,IvyGalleryModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

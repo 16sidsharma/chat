@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   { 
     path: '',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./onboarding-one/onboarding-one.module').then( m => m.OnboardingOnePageModule)
   } ,
   {
     path: 'home',
@@ -37,10 +37,6 @@ const routes: Routes = [
   {
     path: 'notification',
     loadChildren: () => import('./notification/notification.module').then( m => m.NotificationPageModule)
-  },
-  {
-    path: 'header',
-    loadChildren: () => import('./header/header.module').then( m => m.HeaderPageModule)
   },
   {
     path: 'chat-info',

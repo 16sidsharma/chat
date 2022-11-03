@@ -1,9 +1,4 @@
-<!-- <ion-header>
-  <ion-toolbar>
-    <ion-title>leaderboard</ion-title>
-  </ion-toolbar>
-</ion-header> -->
-
+<app-header></app-header>
 <ion-content>
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
@@ -20,7 +15,7 @@
   </ul>
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane  fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-     <div class="contain p-2"> <app-gallery></app-gallery></div>
+     <div class="contain gallery p-2"> <app-gallery></app-gallery></div>
     </div>
     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
       <div class="contain p-2">
@@ -31,7 +26,7 @@
           </div>
         </div>
           <ul *ngFor="let c of count">
-            <li class="mb-3">
+            <li class="mb-3" [routerLink]="['/one-page']"> 
               <div class="list">
                 <div class="pimg">G <div class="active"></div></div>
                 <div class="name"><h4>Guest 765</h4><p>Why did you do that? </p></div>
@@ -50,7 +45,7 @@
           </div>
         </div>
           <ul *ngFor="let c of count">
-            <li class="mb-3">
+            <li class="mb-3" [routerLink]="['/one-page']">
               <div class="list">
                 <div class="pimg">G <div class="active"></div></div>
                 <div class="name"><h4>Guest 765</h4><p>Why did you do that? </p></div>

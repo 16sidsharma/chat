@@ -1,9 +1,9 @@
 <div class="appli-head">
   <ul class="app-hed">
     <li class="back">
-      <ion-icon size="large" name="chevron-back-outline"></ion-icon>
+      <ion-icon size="large" name="chevron-back-outline" (click)="back()"></ion-icon>
     </li>
-    <li class="ne3">
+    <li class="ne3" [routerLink]="['/chat-info']">
       <div class="list">
         <div class="pimg">
           WD

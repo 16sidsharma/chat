@@ -11,13 +11,9 @@
               
               <ion-label>Home</ion-label>
             </ion-item>
-            <ion-item routerDirection="root" [routerLink]="['/leaderBord']" lines="none" detail="false" routerLinkActive="selected">
+            <ion-item routerDirection="root" [routerLink]="['/leaderboard']" lines="none" detail="false" routerLinkActive="selected">
               
               <ion-label>Leader Bord</ion-label>
-            </ion-item>
-            <ion-item routerDirection="root" [routerLink]="['/singleChat']" lines="none" detail="false" routerLinkActive="selected">
-              
-              <ion-label>Single Chat</ion-label>
             </ion-item>
             <ion-item routerDirection="root" [routerLink]="['/Privacy']" lines="none" detail="false" routerLinkActive="selected">
               
@@ -42,31 +38,19 @@
       
       </ion-content>
     </ion-menu>
-    <ion-header *ngIf="!headerOff  || !headerOffRating"  class="header-hide" [translucent]="true">
-      <ion-toolbar>
-        <ion-buttons slot="start" class="btn-bread">
-        <img src="../assets/Menu.png" alt="" class="menu-bn">
-         <ion-menu-button></ion-menu-button>
-        </ion-buttons> 
-        <!-- <h3 class="ion-text-center">Logo Here</h3> -->
-        <ion-buttons slot="end">
-          <ion-icon class="bell" name="notifications-outline"></ion-icon>
-        </ion-buttons> 
-      </ion-toolbar>
-    </ion-header>
     <ion-router-outlet id="main-content"></ion-router-outlet>
     <ion-tabs *ngIf="!headerOff" >
 
       <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="tab1">
+        <ion-tab-button [routerLink]="['/home']">
           <ion-icon name="home-outline"></ion-icon> 
         </ion-tab-button>
     
-        <ion-tab-button tab="tab2">
+        <ion-tab-button [routerLink]="['/login']">
           <ion-icon name="bar-chart-outline"></ion-icon>
         </ion-tab-button>
     
-        <ion-tab-button tab="tab3">
+        <ion-tab-button  [routerLink]="['/chats']">
           <ion-icon name="chatbubbles-outline"></ion-icon>
         </ion-tab-button>
       </ion-tab-bar>

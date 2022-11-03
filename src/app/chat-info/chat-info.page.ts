@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from "@angular/common";
 
 @Component({
   selector: 'app-chat-info',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatInfoPage implements OnInit {
 
-  constructor() { }
+  constructor(private location : Location) { }
 
   ngOnInit() {
   }
@@ -15,5 +16,8 @@ export class ChatInfoPage implements OnInit {
 
   setOpen(isOpen: boolean) {
     this.isModalOpen = isOpen;
+  }
+  back() {
+    this.location.back();
   }
 }

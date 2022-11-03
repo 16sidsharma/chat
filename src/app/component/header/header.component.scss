@@ -1,0 +1,35 @@
+.btn-bread {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+ion-header {
+    display: inline;
+    position: fixed !important;
+}
+
+.header::after {
+    background-image: none;
+}
+
+.bell {
+    margin-top: 11px;
+    font-size: 26px;
+    color: #fff;
+
+}
+
+.menu-bn {
+    position: absolute;
+}
+
+ion-buttons {
+    position: relative;
+    top: 0;
+    bottom: 0;
+}
+
+ion-menu-button {
+    opacity: 0 !important;
+}

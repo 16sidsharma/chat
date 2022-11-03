@@ -8,6 +8,8 @@ import { ChatsPageRoutingModule } from './chats-routing.module';
 
 import { ChatsPage } from './chats.page';
 import { GalleryPage } from '../gallery/gallery.page';
+import { HeaderComponent } from '../component/header/header.component';
+
 
 @NgModule({
   imports: [
@@ -16,6 +18,6 @@ import { GalleryPage } from '../gallery/gallery.page';
     IonicModule,
     ChatsPageRoutingModule
   ],
-  declarations: [ChatsPage,GalleryPage]
+  declarations: [ChatsPage,GalleryPage,HeaderComponent]
 })
 export class ChatsPageModule {}
