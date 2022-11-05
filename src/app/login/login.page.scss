@@ -15,14 +15,19 @@
 mix-blend-mode: normal;
 backdrop-filter: blur(20px);
 /* Note: backdrop-filter has minimal browser support */
-margin: 10px 0px;
+margin: 20px 0px;
 border-radius: 8px;
 padding: 10px 15px;
+}
+
+--ion-input::placeholder{
+    --placeholder-color: #99879D;
 }
 h3{
     margin: 30 auto;
     text-align: center;
     margin-bottom: 36px;
+
 }
 
 .mt-4{
@@ -41,9 +46,13 @@ box-shadow: 0px 41.777610778808594px 33.422088623046875px 0px #9378FF0D;
 
 box-shadow: 0px 100px 80px 0px #9378FF12;
 height: 39px;
+margin: 20px 0px;
 }
 
 p{
     font-size: 15px;
 line-height: 21px;
+margin: 0 auto;
+margin-top: 20px;
+text-align: center;
 }

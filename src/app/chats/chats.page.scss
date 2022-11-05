@@ -13,7 +13,7 @@ border: 1px solid #FFFFFF;
 box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
 border-radius: 5px;
 li a.active{
-    background: linear-gradient(180deg, #1EC6FB 0%, #4C7BF5 100%);
+    background: linear-gradient(180deg, var(--ion-color-primary) 0%, var(--ion-color-secondary) 100%);
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 2px;
     font-family: 'Poppins';
@@ -104,7 +104,8 @@ a{color:#000;
               border-radius: 50%;
           }
       }
-      h4{margin: 0px; margin-bottom: 5px; font-size: 16px;}
+      h4{margin: 0px; margin-bottom: 5px; font-size: 16px;
+      color: var(--ion-color-dark-contrast);}
       ul li{
         list-style: none;
       }
@@ -153,7 +154,7 @@ a{color:#000;
                 color: #fff;
                 width: 20px;
                 height: 20px;
-                background-color: #3CF9C0;
+                background-color: var(--ion-color-secondary);
                 border-radius: 50%;
                 text-align: center;
                 font-size: 10px;
