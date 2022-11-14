@@ -20,36 +20,7 @@
   align-items: center;
 }
 
-.list{
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    // flex-direction: column;
-}
-.pimg{
-    background: rgba(255, 255, 255, 0.36);
-border: 1px solid #ECECEC;
-border-radius: 37.5px;
-span{
-    width: 3px;
-    height: 3px;
-    background-color: blue;
-    border: 1px solid #fff;
-    border-radius: 50%;
-}
-}
-.time{
-    p{color: #848484;}
-    .badge{
-        width: 3px;
-        height: 3px;
-        background-color: #FAAD3C;
-        border: 1px solid #fff;
-        border-radius: 50%;
-    }
-}
-h4{margin: 0px; margin-bottom: 5px; font-size: 16px;}
-ul li{
+ul{
   list-style: none;
 }
 p{font-family: 'Poppins';
@@ -63,47 +34,6 @@ p{font-family: 'Poppins';
 ul{
 
   padding: 0;
-  .pimg{
-    width: 56px;
-height: 54.85px;
-border-radius: 50%;
-font-size: 16px;
-text-align: center;
-color: #ECECEC;
-    padding-top: 15px;
-    position: relative;
-    .active{
-      width:9px;
-      height: 9px;
-      background-color:#2675EC;
-      border-radius: 4px;
-     position:  absolute;
-     bottom: 1;
-     right: 3px;
-
-    }
-  }
-}
-.name{
-  margin: 2px;
-}
-.time{
-  p{font-size: 16px;
-    text-align: center;
-    margin-bottom: 0px;
-        padding-top: 1px;}
-        .badge2{
-          padding: 3px;
-          color: #fff;
-          width: 20px;
-          height: 20px;
-          background-color: #3CF9C0;
-          border-radius: 50%;
-          text-align: center;
-          font-size: 10px;
-    margin-left: 10px;
-        
-        }
 }
 h3{
   font-family: 'Poppins';
@@ -117,4 +47,8 @@ letter-spacing: -0.165px;
 
 color: #131313;
 margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
 }

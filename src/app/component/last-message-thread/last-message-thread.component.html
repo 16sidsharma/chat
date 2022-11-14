@@ -1,0 +1,11 @@
+<li class="mb-3" [routerLink]="['/one-page/', data.id]">
+  <div class="list">
+    <div class="pimg">G <div class="active"></div></div>
+    <div class="name">
+      <h4>Guest {{count + 1}}</h4>
+      <p>{{lastActivity.message}}</p>
+    </div>
+    <div class="time"><p>{{lastActivity.created_on | timeAgo}}</p>
+    <div class="badge2" appReadMessage [data]="data" [currentUser]="userID" >0</div></div>
+  </div>
+</li>

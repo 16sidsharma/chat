@@ -5,34 +5,38 @@
   border: 1px solid #FFFFFF;
   margin-bottom: 20px;
 
-  .inner-scroll{
+  .inner-scroll {
     background: rgba(177, 172, 172, 0.19);
-border: 1px solid #DEDEDE;
-backdrop-filter: blur(21.5px);
-/* Note: backdrop-filter has minimal browser support */
-
-border-radius: 13px;
-color: #fff;
-  }
- 
-
-}
-.pop{
-    list-style: none;
-    background: rgb(247 235 235 / 51%);
     border: 1px solid #DEDEDE;
     backdrop-filter: blur(21.5px);
     /* Note: backdrop-filter has minimal browser support */
-    margin: 0;
+
     border-radius: 13px;
-    li{
-        padding: 15px 11px;
-    }
-    
+    color: #fff;
   }
-  .popover-content{
-    box-shadow: none!important;
+
+
 }
+
+.pop {
+  list-style: none;
+  background: rgb(247 235 235 / 51%);
+  border: 1px solid #DEDEDE;
+  backdrop-filter: blur(21.5px);
+  /* Note: backdrop-filter has minimal browser support */
+  margin: 0;
+  border-radius: 13px;
+
+  li {
+    padding: 15px 11px;
+  }
+
+}
+
+.popover-content {
+  box-shadow: none !important;
+}
+
 .app-hed {
   display: flex;
   list-style: none;
@@ -187,9 +191,12 @@ ion-icon {
 
 .messages {
   position: relative;
-padding: 10px;
+  padding: 10px;
+  height: 350px;
+  overflow: scroll;
+
   .in {
-    background: #3CF9C0;
+    background: var(--ion-color-primary);
     border-radius: 35px 35px 35px 10px;
     width: 80%;
     margin-bottom: 20px;
@@ -242,58 +249,68 @@ padding: 10px;
 p {
   margin: 0px;
 }
-h6{
-    margin-top: none;
+
+h6 {
+  margin-top: none;
 }
-.modal-rating{
-  
-background: #FFFFFF;
-border-radius: 63px;
-background: #FFFFFF!important;
-    border-radius: 63px;
-    height: 60%;
-    padding: 30px;
+
+.modal-rating {
+
+  background: #FFFFFF;
+  border-radius: 63px;
+  background: #FFFFFF !important;
+  border-radius: 63px;
+  height: 60%;
+  padding: 30px;
 }
-.appi-footer{
-    background-color: #fff;
-    padding:20px 15px;
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    display: flex;
-.sendMessage{
+
+.appi-footer {
+  background-color: #fff;
+  padding: 20px 15px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+
+  .sendMessage {
     background-color: #FAFAFA;
     border-radius: 30px;
-width: 100%;
-display: flex;
-justify-content: space-between;
-padding: 10px 0px;
-    input{
-        width: 60%;
-        padding: 10px;
-        border: none;
-        color: #848484;
-        background-color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+
+    input {
+      width: 60%;
+      padding: 10px;
+      border: none;
+      color: #848484;
+      background-color: transparent;
     }
-    .icons{
-        display: flex;
-        ion-icon{
-            margin:10px ;
-            color: #3CF9C0;
-        }
+
+    .icons {
+      display: flex;
+
+      ion-icon {
+        margin: 10px;
+        color: var(--ion-color-secondary);
+      }
     }
+  }
 }
+
+ion-header ion-toolbar {
+  display: none !important;
 }
-ion-header ion-toolbar{
-    display: none!important;
-}
-ion-modal .ion-page{
+
+ion-modal .ion-page {
   background: #fff;
   border-radius: 50px;
   padding: 45px 42px;
-  
+
 }
-ion-textarea{
+
+ion-textarea {
   --background: #ececec;
   --color: rgb(145, 145, 145);
   --padding-end: 10px;
@@ -301,7 +318,8 @@ ion-textarea{
   --placeholder-color: #ddd;
   --placeholder-opacity: 0.8;
 }
-.rate{
+
+.rate {
   display: flex;
   justify-content: space-around;
   margin-bottom: 20px;
@@ -309,4 +327,26 @@ ion-textarea{
 
 ion-popover::part(backdrop) {
   background-color: transparent;
+}
+
+body[color-theme="dark"] .messages .out {
+
+  background: #333333;
+  color: #fff;
+ 
+
+}
+
+body[color-theme="dark"]  .appi-footer {
+  background-color: var(--ion-color-secondary);
+ 
+}
+.messages .in :nth-child(2){
+  background: var(--ion-color-secondary!important);
+}
+.messageInput {
+    outline: none;
+}
+.hidden {
+  display: none;
 }

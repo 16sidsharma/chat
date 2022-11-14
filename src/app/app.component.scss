@@ -17,6 +17,7 @@ ion-menu ion-list {
   margin-top: 100px;
   padding: 20px 0;
 }
+
 ion-menu.md ion-note {
   margin-bottom: 30px;
 }
@@ -68,15 +69,15 @@ ion-menu.md ion-item ion-icon {
 ion-menu.md ion-item ion-label {
   font-weight: 500;
   font-family: 'Poppins';
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 27px;
-/* identical to box height */
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height */
 
-letter-spacing: -0.165px;
+  letter-spacing: -0.165px;
 
-color: #848484;
+  color: #848484;
 }
 
 ion-menu.ios ion-content {
@@ -132,23 +133,30 @@ ion-note {
 ion-item.selected {
   --color: var(--ion-color-primary);
 }
-.btn-bread{
+
+.btn-bread {
   position: absolute;
   top: 10px;
   left: 10px;
 }
-ion-header{
+
+ion-header {
   display: inline;
-  position: fixed!important;
+  position: fixed !important;
 }
-.header-md::after{
+
+.header-md::after {
   background-image: none;
 }
 
-.bell{    margin-top: 11px;
-  font-size: 26px; color:#fff;
-  
-}ion-tab-bar{
+.bell {
+  margin-top: 11px;
+  font-size: 26px;
+  color: #fff;
+
+}
+
+ion-tab-bar {
   width: 90%;
   margin: 0 auto;
   position: relative;
@@ -156,17 +164,47 @@ ion-header{
   border: 1px solid #cdcdcd;
   border-radius: 43px;
   box-shadow: 0px 2px 20px -7px rgba(0, 0, 0, 0.25);
+  background-color: #fefefe;
+}
+
+ion-menu ion-content {
+  background: rgb(255 255 255 / 82%) !important;
+  box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.25) !important;
+  backdrop-filter: blur(2px) !important;
+}
+
+.ion-overlay-wrapper {
+  background-color: #fff !important;
+}
+
+.selic label {
+  font-size: 18px !important;
+  color: #000 !important;
+}
+.alert-wrapper.sc-ion-alert-md{
+  background-color: #848484!important;
+  .alert-radio-inner{
+    color: #fff;
   }
-  ion-menu ion-content{
-    background: rgb(255 255 255 / 82%) !important;
-box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.25)!important;
-backdrop-filter: blur(2px)!important;
-  }
-   
-    .ion-overlay-wrapper{
-background-color: #fff!important;
-    }
- .selic  label{
-  font-size: 18px!important;
-  color: #000!important;
  }
+ .newSelect{
+  width: 100%;
+  padding: 10px;
+  border: none;
+  margin: 10px 0px ;
+  color: #000;
+  outline :none;
+  background-color: transparent;
+  option{
+    text-transform: capitalize;
+  }
+ }
+ ion-select {
+  --placeholder-color: #000000;
+  --placeholder-opacity: 1;
+  width: 100%;
+  justify-content: center;
+}
+.alert-wrapper {
+  background: #f01e1e!important;
+}
