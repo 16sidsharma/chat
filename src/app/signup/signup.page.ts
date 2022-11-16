@@ -29,6 +29,7 @@ export class SignupPage implements OnInit {
       (res: any) => {
         if (res) {
           if (res['status'] == 1) {
+            form.resetForm();
             // Storing the User data.
             this.toastService.messageToast(res['message']);
             localStorage.setItem('userID', res['data']['id']);

@@ -55,26 +55,27 @@ export class OnePagePage implements OnInit {
   }
 
   sendMessage() {
-    let chat = new FormData();
-    chat.append('sender_id', this.currentUser);
-    chat.append('receiver_id', this.openChatUser);
-    chat.append('message', this.text);
-    chat.append('thread_id', this.threadId);
-    this.auth.common('conversation/startConversation',chat).subscribe( 
-      (res: any) => {
-        this.text = '';
-        if (res['status'] == 1) {
-          console.log(res['data'] ,'fdfddsds') 
-          this.messageThread.push(res['data']); 
-          console.log(this.messageThread ,'dsds') 
-        } else {
-          //this.messageThread = [];
+    if(this.text) {
+      let chat = new FormData();
+      chat.append('sender_id', this.currentUser);
+      chat.append('receiver_id', this.openChatUser);
+      chat.append('message', this.text);
+      chat.append('thread_id', this.threadId);
+      this.auth.common('conversation/startConversation',chat).subscribe( 
+        (res: any) => {
+          this.text = '';
+          if (res['status'] == 1) {
+            this.messageThread.push(res['data']); 
+          } else {
+            //this.messageThread = [];
+          }
+        },
+        (error: any) => {
+          //this.toastService.messageToast('Network Issue.');
         }
-      },
-      (error: any) => {
-        //this.toastService.messageToast('Network Issue.');
-      }
-    );
+      );
+    }
+    
   }
 
 }

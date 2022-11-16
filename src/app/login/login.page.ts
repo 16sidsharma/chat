@@ -34,6 +34,7 @@ export class LoginPage implements OnInit {
         if (res) {
           if (res['status'] == 1) {
             // Storing the User data.
+            form.resetForm();
             localStorage.setItem('userID', res['data']['id']);
             this.router.navigate(['home']);
           } else {

@@ -74,10 +74,10 @@
 
 <div class="appi-footer">
   <div class="sendMessage">
-    <input class="messageInput" [(ngModel)]="text" type="text" placeholder="Type your message..." />
+    <input class="messageInput" (keyup.enter)="sendMessage()" [(ngModel)]="text" type="text" placeholder="Type your message..." />
     <div class="icons">
       
-      <ion-icon size="large" (click)="sendMessage()" [ngClass]="text ? '' : 'hidden' " name="send-sharp"></ion-icon>
+      <ion-icon size="large"  (click)="sendMessage()" [ngClass]="text ? '' : 'hidden' " name="send-sharp"></ion-icon>
       <ion-icon size="large" name="add-sharp"></ion-icon>
       <ion-icon size="large" name="happy-sharp"></ion-icon>
     </div>

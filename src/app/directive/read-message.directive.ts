@@ -27,6 +27,7 @@ export class ReadMessageDirective {
         (res: any) => {
           if (res['status'] == 1) {
             if(res['data'] != 0) {
+              this.el.className = 'badge2';
               this.el.innerHTML =  res['data']; 
             }else {
               this.el.className = 'hidden';
