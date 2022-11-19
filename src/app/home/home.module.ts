@@ -9,6 +9,9 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { HomePage } from './home.page';
 import { TabsPage } from '../tabs/tabs.page';
 import { HeaderComponent } from '../component/header/header.component';
+import { LastMessageThreadComponent } from '../component/last-message-thread/last-message-thread.component';
+import { ReadMessageDirective } from './../directive/read-message.directive';
+import {TimeAgoPipe} from 'time-ago-pipe';
 
 @NgModule({
   imports: [
@@ -17,6 +20,6 @@ import { HeaderComponent } from '../component/header/header.component';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, HeaderComponent]
+  declarations: [HomePage, HeaderComponent, ReadMessageDirective, LastMessageThreadComponent, TimeAgoPipe]
 })
 export class HomePageModule {}

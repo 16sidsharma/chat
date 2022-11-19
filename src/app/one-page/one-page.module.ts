@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { OnePagePageRoutingModule } from './one-page-routing.module';
 
 import { OnePagePage } from './one-page.page';
+import {TimeAgoPipe} from 'time-ago-pipe';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { OnePagePage } from './one-page.page';
     IonicModule,
     OnePagePageRoutingModule
   ],
-  declarations: [OnePagePage]
+  declarations: [OnePagePage, TimeAgoPipe]
 })
 export class OnePagePageModule {}

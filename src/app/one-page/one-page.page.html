@@ -48,25 +48,23 @@
 
 <ion-content>
   <div class="messages">
-    <div class="in">
-      <h6 class="user">New User 20:22 PM</h6>
+    <!-- receiver chat  -->
+    <span *ngFor="let message of messageThread">
+      
+    <div class="in" *ngIf="message.receiver_id == currentUser">
+      <h6 class="user">Guest  {{message.created_on | timeAgo}}</h6>
 
       <p>
-        Hi, son, how are you doing? Today, my father and I went to buy a car
+        {{message.message}}
       </p>
     </div>
-    <div class="out">
+    <!-- sender chat -->
+    <div class="out" *ngIf="message.sender_id == currentUser">
       <p>
-        Oh! Cool Send me photo):
+        {{message.message}}
       </p>
     </div>
-    <div class="in">
-      <h6 class="user">New User 20:22 PM</h6>
-
-      <p>
-        Ok😉
-      </p>
-    </div>
+    </span>
   </div>
 
 
@@ -76,11 +74,12 @@
 
 <div class="appi-footer">
   <div class="sendMessage">
-    <input type="text" placeholder="Type your message..." />
+    <input class="messageInput" (keyup.enter)="sendMessage()" [(ngModel)]="text" type="text" placeholder="Type your message..." />
     <div class="icons">
+      
+      <ion-icon size="large"  (click)="sendMessage()" [ngClass]="text ? '' : 'hidden' " name="send-sharp"></ion-icon>
       <ion-icon size="large" name="add-sharp"></ion-icon>
       <ion-icon size="large" name="happy-sharp"></ion-icon>
-      <ion-icon hidden name="send-sharp"></ion-icon>
     </div>
   </div>
 </div>

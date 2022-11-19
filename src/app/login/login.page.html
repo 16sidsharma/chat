@@ -1,10 +1,22 @@
-
 <ion-content>
-<div class="login">
-<h3>Logo Here</h3>
-<ion-input class="input" type="text" placeholder="login"></ion-input>
-<ion-input class="input" type="password" placeholder="Password"></ion-input>
-<ion-button shape="round" expand="full" class="mt-4">Login</ion-button>
-<p class="mt-2">Need To Signup <b [routerLink]="['/signup']">ClickHere!</b></p>
-</div>
+    <div class="login">
+        <h3>Logo Here</h3>
+        <form name="form" (ngSubmit)="f.form.valid && onSubmit(f)" #f="ngForm" novalidate>
+            <ion-input class="input" type="text" placeholder="email" [(ngModel)]="name" #uEmail="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && uEmail.invalid }" name="email" required email></ion-input>
+            <div *ngIf="f.submitted && uEmail.invalid" class="invalid-feedback">
+                <div *ngIf="uEmail.errors.required">Email is required</div>
+                <div *ngIf="uEmail.errors.email">Email must be a valid email address</div>
+            </div>
+            <ion-input class="input" type="password" placeholder="Password" [(ngModel)]="password" #uPassword="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && uPassword.invalid }" required minlength="6" name="password">
+            </ion-input>
+            <div *ngIf="f.submitted && uPassword.invalid" class="invalid-feedback">
+                <div *ngIf="uPassword.errors.required">Password is required</div>
+                <div *ngIf="uPassword.errors.minlength">Password must be at least 6 characters</div>
+            </div>
+            <ion-button type="submit" shape="round" expand="full" class="mt-4">Login</ion-button>
+        </form>
+        <p class="mt-2">Need To Signup <b [routerLink]="['/signup']">ClickHere!</b></p>
+    </div>
 </ion-content>

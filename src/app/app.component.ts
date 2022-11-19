@@ -1,8 +1,9 @@
 
 import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { Location } from '@angular/common';
-import { Platform } from '@ionic/angular';
+import { Platform, NavController, MenuController } from '@ionic/angular';
+import { AuthService } from './service/auth.service';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -19,7 +20,7 @@ export class AppComponent {
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
 
-  headerOff: boolean = false;
+  headerOff: boolean = true;
   headerOffRating: boolean = true;
 
   defaultTheme = "light";
@@ -31,24 +32,36 @@ export class AppComponent {
 
 
 
-  constructor(private renderer: Renderer2, private router: Router, private location: Location, public platform: Platform) {
-
+  constructor(
+    private renderer: Renderer2,
+    private router: Router, 
+    private location: Location, 
+    public platform: Platform,
+    private auth: AuthService,
+    private nav: NavController,
+    private menuCtrl: MenuController
+    ) {
+      const restrictPage = ['/login','/signup','/'];
+      this.router.events.subscribe((ev) => {
+        if (ev instanceof NavigationEnd) { 
+          if(restrictPage.includes(ev.urlAfterRedirects)) {
+            this.menuCtrl.enable(false);
+            this.headerOff = false;
+          }else{
+            this.headerOff = true;
+            this.menuCtrl.enable(true);
+          }
+        }
+      });
     this.setDefault();
   }
   ngOnInit() {
-    if (this.location.path() === "/one-page") {
-      this.headerOff = true;
-    }
-    if (this.location.path() === "/all-rateing") {
-      this.headerOffRating = true;
-
-    }
   }
   colors: any = [
-    { id: 1, name: "dark" },
-    { id: 2, name: "red" },
-    { id: 3, name: "dual" },
-    { id: 4, name: "light" },
+    { id: 1, name: "dark", diaplayName: 'Dark'},
+    { id: 2, name: "red", diaplayName: 'Red' },
+    { id: 3, name: "dual", diaplayName: 'Dual' },
+    { id: 4, name: "light", diaplayName: 'Light' },
   ];
   handleChange(e) {
     let newval = e.detail.value;
@@ -86,6 +99,10 @@ export class AppComponent {
 
   setDefault() {
     document.body.setAttribute('color-theme', 'light');
+  }
+
+  logout() {
+    this.auth.logout();
   }
  
 }

@@ -1,6 +1,6 @@
 {
-	"appId": "io.ionic.starter",
-	"appName": "new",
+	"appId": "com.chat.app",
+	"appName": "Chat",
 	"webDir": "www",
 	"bundledWebRuntime": false
 }

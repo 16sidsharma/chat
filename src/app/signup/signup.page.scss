@@ -1,26 +1,37 @@
-.signup{
+.signup {
 
-width: 317px;
-height: 596px;
-margin: 0 auto; 
-background: rgba(255, 255, 255, 0.38);
-border: 2px solid #FFFFFF;
-border-radius: 16px;
-margin-top: 140px;
-padding: 0px 20px;
-// text-align: center;
-h3{
-    text-align: center;
+    width: 317px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.38);
+    border: 2px solid #FFFFFF;
+    border-radius: 16px;
+    margin-top: 140px;
+    padding: 0px 20px;
+
+    // text-align: center;
+    h3 {
+        text-align: center;
+    }
 }
-}
-ion-input{
+
+ion-input {
     margin-top: 15px;
     background-color: #FFFFFF;
+    color: #000;
     border-radius: 5px;
 }
-p{
-    color: #120E21;text-align: justify;
-font-size: 14px;}
-ion-menu{
+
+ion-input {
+    --placeholder-color: #99879D;
+}
+
+p {
+    color: #120E21;
+    text-align: center;
+    font-size: 14px;
+}
+
+ion-menu {
     color: #fefefe;
 }
+
