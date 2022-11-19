@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Location } from "@angular/common";
 import { MessageService } from "./../service/message.service";
 import { AuthService } from "./../service/auth.service";
@@ -16,7 +16,7 @@ export class OnePagePage implements OnInit {
   messageThread: any = [];
   text: any = '';
   openChatUser: any = ''
-
+  @ViewChild('scrollMe') private myScrollContainer: ElementRef;
   constructor(
     private location : Location,
     private message : MessageService,
@@ -48,7 +48,17 @@ export class OnePagePage implements OnInit {
         //this.toastService.messageToast('Network Issue.');
       }
     );
+    
+    this.scrollToBottom();                
   }
+  ngAfterViewChecked() {        
+    this.scrollToBottom();        
+} 
+  scrollToBottom(): void {
+    try {
+        this.myScrollContainer.nativeElement.scrollTop = this.myScrollContainer.nativeElement.scrollHeight;
+    } catch(err) { }                 
+}
 
   back() {
     this.location.back();

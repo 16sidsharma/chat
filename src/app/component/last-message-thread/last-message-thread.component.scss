@@ -43,6 +43,7 @@
 }
 
 .time {
+    
     p {
         color: #848484;
     }
@@ -101,13 +102,15 @@ p {
 
 .name {
     margin: 2px;
+    min-width: 140px;
 }
 
 .time {
+    min-width: 60px;
     p {
-        font-size: 16px;
+        font-size: 13px;
         text-align: center;
-        margin-bottom: 0px;
+        margin-bottom: 5px;
         padding-top: 1px;
     }
 
@@ -121,7 +124,7 @@ p {
         text-align: center;
         font-size: 10px;
         margin-left: 10px;
-
+        float: right;
     }
 }
 
