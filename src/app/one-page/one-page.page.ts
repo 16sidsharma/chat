@@ -27,6 +27,11 @@ export class OnePagePage implements OnInit {
   setOpen(isOpen: boolean) {
     this.isModalOpen = isOpen;
   }
+ 
+  ionViewWillEnter(){
+    
+  }
+
   ngOnInit() {
     this.currentUser = localStorage.getItem('userID');
     this.openChatUser = this.route.snapshot.params.id
