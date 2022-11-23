@@ -1,4 +1,4 @@
-<div class="appli-head">
+<div class="appli-head" *ngIf="!showButtons">
   <ul class="app-hed">
     <li class="back">
       <ion-icon size="large" name="chevron-back-outline" (click)="back()"></ion-icon>
@@ -21,7 +21,17 @@
   </ul>
 </div>
 
+<div class="appli-head ioco" *ngIf="showButtons">
+  <ul class="app-hed heade-to">
+<li><ion-icon  size="large" name="trash-outline"></ion-icon></li>
+<li><ion-icon  size="large" name="copy-outline"></ion-icon></li>
+<li><ion-icon  size="large" name="heart-outline"></ion-icon></li>
+<li><ion-icon  size="large" name="pin-outline"></ion-icon></li>
+<li><ion-icon  size="large" name="heart-outline"></ion-icon></li>
+<li><ion-icon (click)="onClose()" size="large" name="close-outline"></ion-icon></li>
 
+  </ul>
+</div>
 
 <ion-popover trigger="click-trigger" triggerAction="click">
   <ng-template>
@@ -51,12 +61,28 @@
     <!-- receiver chat  -->
     <span *ngFor="let message of messageThread">
       
-    <div class="in" *ngIf="message.receiver_id == currentUser">
+    <div class="in" (click)="onClick()" *ngIf="message.receiver_id == currentUser">
       <h6 class="user">Guest  {{message.created_on | timeAgo}}</h6>
 
       <p>
         {{message.message}}
       </p>
+      <div class="react" *ngIf="showButtons">
+        <ul>
+          <li  *ngFor="let smily of obj">
+            <ngx-emoji   emoji="{{smily.name}}" (click)="getEmoji(smily.name)" size="24" [fallback]="emojiFallback"></ngx-emoji>
+          </li>
+          
+
+
+          <!-- <li><ion-icon  size="small" name="trash-outline"></ion-icon></li>
+          <li><ion-icon  size="small" name="trash-outline"></ion-icon></li> -->
+        </ul>
+      </div>
+      <div *ngIf="setEmo" class="smallEmoji">
+        <ngx-emoji   emoji="{{setItem}}" size="24" [fallback]="emojiFallback"></ngx-emoji>
+
+      </div>
     </div>
     <!-- sender chat -->
     <div class="out" *ngIf="message.sender_id == currentUser">

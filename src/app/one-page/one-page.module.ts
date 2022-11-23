@@ -8,13 +8,14 @@ import { OnePagePageRoutingModule } from './one-page-routing.module';
 
 import { OnePagePage } from './one-page.page';
 import {TimeAgoPipe} from 'time-ago-pipe';
-
+import { EmojiModule } from '@ctrl/ngx-emoji-mart/ngx-emoji';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    OnePagePageRoutingModule
+    OnePagePageRoutingModule,
+    EmojiModule
   ],
   declarations: [OnePagePage, TimeAgoPipe]
 })

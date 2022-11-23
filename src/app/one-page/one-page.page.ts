@@ -16,7 +16,17 @@ export class OnePagePage implements OnInit {
   messageThread: any = [];
   text: any = '';
   openChatUser: any = ''
+  showButtons:boolean=false;
+  setEmo:boolean=false;
   @ViewChild('scrollMe') private myScrollContainer: ElementRef;
+  obj =[
+    {id:"1",name:"smiley"  },
+    {id:"2",name:"pensive"  },
+    {id:"3",name:"angry"  },
+    {id:"4",name:"heart"  }
+
+]
+  setItem: any;
   constructor(
     private location : Location,
     private message : MessageService,
@@ -49,7 +59,8 @@ export class OnePagePage implements OnInit {
       }
     );
     
-    this.scrollToBottom();                
+    this.scrollToBottom();  
+    console.log("datsts0",this.setItem)              
   }
   ngAfterViewChecked() {        
     this.scrollToBottom();        
@@ -59,7 +70,28 @@ export class OnePagePage implements OnInit {
         this.myScrollContainer.nativeElement.scrollTop = this.myScrollContainer.nativeElement.scrollHeight;
     } catch(err) { }                 
 }
+getEmoji(name){
+  console.log(name)
+  this.setEmoji(name)
+}
+setEmoji(name){
+  console.log(name)
+  if(name==="angry"){
+    this.setItem="angry"
+  }
+  else if(name === "pensive"){
+    this.setItem="pensive"
 
+  }
+  else if(name === "smiley"){
+    this.setItem="smiley"
+  }
+  else if(name === "heart"){
+    this.setItem="heart"
+  }
+  this.showButtons=false;
+  this.setEmo=true;
+}
   back() {
     this.location.back();
   }
@@ -87,5 +119,10 @@ export class OnePagePage implements OnInit {
     }
     
   }
-
+  onClick(){
+this.showButtons=true; 
+  }
+  onClose(){
+    this.showButtons=false; 
+      }
 }

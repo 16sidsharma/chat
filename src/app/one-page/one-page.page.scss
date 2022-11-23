@@ -1,3 +1,5 @@
+@import '~@ctrl/ngx-emoji-mart/picker';
+
 .appli-head {
   width: 100%;
   height: 75px;
@@ -71,6 +73,7 @@
 
   .time {
     min-width: 60px;
+
     p {
       color: #848484;
     }
@@ -156,6 +159,7 @@ ion-icon {
 
 .name {
   min-width: 140px;
+
   h4 {
     font-family: 'Poppins';
     font-style: normal;
@@ -194,7 +198,7 @@ ion-icon {
 .messages {
   position: relative;
   padding: 10px;
-  height: 350px;
+  height: auto;
   overflow: scroll;
 
   .in {
@@ -335,20 +339,96 @@ body[color-theme="dark"] .messages .out {
 
   background: #333333;
   color: #fff;
- 
+
 
 }
 
-body[color-theme="dark"]  .appi-footer {
+body[color-theme="dark"] .appi-footer {
   background-color: var(--ion-color-secondary);
- 
+
 }
-.messages .in :nth-child(2){
-  background: var(--ion-color-secondary!important);
+
+.messages .in :nth-child(2) {
+  background: var(--ion-color-secondary !important);
 }
+
 .messageInput {
-    outline: none;
+  outline: none;
 }
+
 .hidden {
   display: none;
+}
+
+.heade-to {
+  background-color: var(--ion-color-primary);
+
+}
+
+.ioco ion-icon {
+  font-size: 54px;
+  color: #fff !important;
+}
+
+.react {
+  position: absolute;
+  // width: 54%;
+  bottom: 36px;
+  display: flex;
+  animation: gelatine 1s ease;
+
+  ul {
+    background: var(--ion-color-primary);
+    width: 100%;
+    height: 59px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    box-shadow: 1px 1px 19px -3px black;
+    list-style: none;
+
+    li {
+      padding: 0px 10px;
+      transform: scale(1.1);
+      transition: .5s ease-in-out;
+    }
+
+    li:hover {
+      transform: scale(1.5);
+    }
+  }
+}
+
+.in {
+  position: relative;
+}
+
+@keyframes gelatine {
+
+  from,
+  to {
+    transform: scale(1, 1);
+  }
+
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+
+ngx-emoji{
+  animation: pop 1s ease-in;
+}
+
+@keyframes pop{
+  0%{transform: scale(0);}
+  100%{transform: scale(1);}
+
 }
