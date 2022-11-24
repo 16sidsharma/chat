@@ -71,18 +71,14 @@
         <ul>
           <li  *ngFor="let smily of obj">
             <ngx-emoji   emoji="{{smily.name}}" (click)="getEmoji(smily.name)" size="24" [fallback]="emojiFallback"></ngx-emoji>
-          </li>
-          
-
-
-          <!-- <li><ion-icon  size="small" name="trash-outline"></ion-icon></li>
-          <li><ion-icon  size="small" name="trash-outline"></ion-icon></li> -->
+          </li> 
         </ul>
       </div>
       <div *ngIf="setEmo" class="smallEmoji">
         <ngx-emoji   emoji="{{setItem}}" size="24" [fallback]="emojiFallback"></ngx-emoji>
 
       </div>
+      <div *ngIf="showButtons"   class="select"></div>
     </div>
     <!-- sender chat -->
     <div class="out" *ngIf="message.sender_id == currentUser">

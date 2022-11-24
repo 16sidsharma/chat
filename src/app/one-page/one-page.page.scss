@@ -432,3 +432,12 @@ ngx-emoji{
   100%{transform: scale(1);}
 
 }
+
+.select{
+  width: 100vw;
+  background: #3f51b554;
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  left: -21px;
+}
