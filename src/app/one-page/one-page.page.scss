@@ -72,6 +72,7 @@
 
   .time {
     min-width: 60px;
+
     p {
       color: #848484;
     }
@@ -157,6 +158,7 @@ ion-icon {
 
 .name {
   min-width: 140px;
+
   h4 {
     font-family: 'Poppins';
     font-style: normal;
@@ -336,20 +338,22 @@ body[color-theme="dark"] .messages .out {
 
   background: #333333;
   color: #fff;
- 
+
 
 }
 
-body[color-theme="dark"]  .appi-footer {
+body[color-theme="dark"] .appi-footer {
   background-color: var(--ion-color-secondary);
- 
+
 }
 .messages .in :nth-child(2){
   background: var(--ion-color-secondary !important);
 }
+
 .messageInput {
-    outline: none;
+  outline: none;
 }
+
 .hidden {
   display: none;
 }

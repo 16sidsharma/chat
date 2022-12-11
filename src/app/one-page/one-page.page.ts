@@ -115,6 +115,7 @@ export class OnePagePage implements OnInit {
     );
   }
 
+  
   back() {
     this.location.back();
   }
