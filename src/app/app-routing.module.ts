@@ -31,7 +31,7 @@ const routes: Routes = [
     loadChildren: () => import('./chats/chats.module').then( m => m.ChatsPageModule)
   },
   {
-    path: 'one-page/:id',
+    path: 'one-page/:id/:id2',
     loadChildren: () => import('./one-page/one-page.module').then( m => m.OnePagePageModule)
   },
   {
@@ -49,6 +49,10 @@ const routes: Routes = [
   {
     path: 'report',
     loadChildren: () => import('./report/report.module').then( m => m.ReportPageModule)
+  },
+  {
+    path: 'user-list',
+    loadChildren: () => import('./user-list/user-list.module').then( m => m.UserListPageModule)
   }
  
 ];

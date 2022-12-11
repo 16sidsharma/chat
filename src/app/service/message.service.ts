@@ -32,6 +32,10 @@ export class MessageService {
     return this.auth.common('conversation/getOneToOneConversation',data);
   }
 
+  getOpenChatMessage(data) {
+    return this.auth.common('conversation/getOpenChatMessage',data);
+  }
+  
   getUnreadMessageCount(data) {
     return this.auth.common('conversation/getUnreadMessageCount',data);
   }
@@ -39,4 +43,29 @@ export class MessageService {
   getLastMessage(data) {
     return this.auth.common('conversation/getLastMessage',data);
   }
+
+  updateUnreadMessage(data) {
+    return this.auth.common('conversation/updateReadMessage', data);
+  }
+
+  clearChat(data) {
+    return this.auth.common('conversation/clearSpecificChat', data);
+  }
+
+  clearSingleChat(data) {
+    return this.auth.common('conversation/clearSingleChat', data);
+  }
+  
+  addReaction(data) {
+    return this.auth.common('conversation/addReaction', data);
+  }
+
+  getSpecificMessageReaction(data) {
+    return this.auth.common('conversation/getReaction', data);
+  }
+
+  pinChatMessage(data) {
+    return this.auth.common('conversation/pinChatMessage', data);
+  }
+  
 }

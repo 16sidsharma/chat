@@ -1,0 +1,14 @@
+.smallEmoji {
+    position: absolute;
+    background: #f8f9fa;
+    border-radius: 50px;
+    box-shadow: 5px 10px rgb(0 123 255 / 25%);
+    padding: 5px;
+    z-index: 1;
+  }
+  .smallEmoji span {
+    padding: 2px;
+    color: rgba(0, 0, 0, 0.51);
+    font-size: 12px;
+    font-weight: bold;
+}

@@ -22,7 +22,7 @@ export class ReadMessageDirective {
    getReadStatus(currentUser, data){
       let chat = new FormData();
       chat.append('sender_id', currentUser);
-      chat.append('receiver_id', data.id);
+      chat.append('receiver_id', data);
       const test = this.message.getUnreadMessageCount(chat).subscribe( 
         (res: any) => {
           if (res['status'] == 1) {

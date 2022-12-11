@@ -9,6 +9,7 @@ import { MessageService } from '../../service/message.service';
 export class LastMessageThreadComponent implements OnInit {
   @Input() data: any;
   @Input() count: any;
+  @Input() chatID: any;
   userID: string;
   lastActivity : any =[];
   constructor(
@@ -27,7 +28,6 @@ export class LastMessageThreadComponent implements OnInit {
     const test = this.message.getLastMessage(chat).subscribe( 
       (res: any) => {
         if (res['status'] == 1) {
-          console.log(res['data']);
           this.lastActivity = res['data'];
         } else {
           this.lastActivity = [];

@@ -1,20 +1,32 @@
 
 
 <ion-content>
-  <div class="float-left p-2 xdxc">
+  <div class="float-left p-2 xdxc" (click)="back()">
     <ion-icon name="arrow-back-outline"></ion-icon> <p class="ml-2">Back</p> 
   </div>
 
   <div class="card p-4">
-    <label class="text-center">Select The reason why want 
+    <label class="text-center">Select the reason why want 
       to report</label>
-<ion-item> 
-  <ion-select  multiple="true" placeholder="Select reason">
-    <ion-select-option value="peperoni">Peperoni</ion-select-option>
-    <ion-select-option value="hawaii">Hawaii</ion-select-option>
-  </ion-select>
-</ion-item>
-<ion-button shape="round" expand="full" class="mt-4">Login</ion-button>
+    <!-- <ion-item> 
+      <ion-select placeholder="Select reason">
+        <ion-select-option value="Report Issue">Report Issue</ion-select-option>
+        <ion-select-option value="Report Message Chat">Report Message Chat</ion-select-option>
+      </ion-select>
+    </ion-item> -->
+    <ion-list>
+      <ion-radio-group allow-empty-selection="true" name="radio-group" (ionChange)="radioGroupChange($event)" #radioGroup>
+  
+        <ion-item *ngFor="let item of report_list" (ionFocus)="radioFocus()" (ionSelect)="radioSelect($event)"
+          (ionBlur)="radioBlur()">
+          <ion-label>{{item.text}}</ion-label>
+          <ion-radio slot="start" name="{{item.name}}" value="{{item.value}}"
+            color="{{item.color}}" disabled="{{item.disabled}}"></ion-radio>
+        </ion-item>
+  
+      </ion-radio-group>
+    </ion-list>
+  <ion-button shape="round" expand="full" class="mt-4">Submit</ion-button>
 
   </div>
 </ion-content>

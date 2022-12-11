@@ -17,12 +17,12 @@ index: number;
   showGallery(index: number) {
     let prop = {
         images: [
-            {path: './../../assets/Rectangle 38.png'}, 
-            {path: './../../assets/Rectangle 39.png'}, 
-            {path: './../../assets/Rectangle 41.png'}, 
-            {path: './../../assets/Rectangle 42.png'}, 
-            {path: './../../assets/Rectangle 43.png'}, 
-            {path: './../../assets/Rectangle 44.png'}, 
+            {path: 'assets/Rectangle 38.png'}, 
+            {path: 'assets/Rectangle 39.png'}, 
+            {path: 'assets/Rectangle 41.png'}, 
+            {path: 'assets/Rectangle 42.png'}, 
+            {path: 'assets/Rectangle 43.png'}, 
+            {path: 'assets/Rectangle 44.png'}, 
 
         ],
         index

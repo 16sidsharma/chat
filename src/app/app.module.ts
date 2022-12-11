@@ -12,7 +12,7 @@ import { OnePagePipe } from './one-page.pipe';
 import { IvyGalleryModule } from 'angular-gallery';
 import { HttpClientModule } from '@angular/common/http';
 
-
+ 
 @NgModule({
   declarations: [AppComponent, LoginPipe, OnePagePipe],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,IvyGalleryModule,HttpClientModule,FormsModule,CommonModule],

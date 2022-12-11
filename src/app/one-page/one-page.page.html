@@ -1,4 +1,4 @@
-<div class="appli-head">
+<div class="appli-head" *ngIf="!showButtons">
   <ul class="app-hed">
     <li class="back">
       <ion-icon size="large" name="chevron-back-outline" (click)="back()"></ion-icon>
@@ -6,30 +6,41 @@
     <li class="ne3" [routerLink]="['/chat-info']">
       <div class="list">
         <div class="pimg">
-          WD
+          G
           <div class="active"></div>
         </div>
         <div class="name">
-          <h4>Web Discussion</h4>
+          <h4>Guest {{anonymous}}</h4>
           <p>Last Activity 2:23PM</p>
         </div>
       </div>
     </li>
     <li class="menus">
-      <ion-icon name="grid" id="click-trigger"></ion-icon>
+      <ion-icon (click)="openMenu($event)" name="grid"></ion-icon>
     </li>
   </ul>
 </div>
 
+<div class="appli-head ioco" *ngIf="showButtons">
+  <ul class="app-hed heade-to">
+<li><ion-icon  size="large" (click)="deleteSingleChat(dynamicData)" name="trash-outline"></ion-icon></li>
+<li><ion-icon  size="large" (click)="copyString()" name="copy-outline"></ion-icon></li>
+<!-- <li><ion-icon  size="large" name="heart-outline"></ion-icon></li> -->
+<li><ion-icon  size="large" (click)="pinSingleChat(dynamicData)" name="pin-outline"></ion-icon></li>
+<!-- <li><ion-icon  size="large" name="heart-outline"></ion-icon></li> -->
+<li><ion-icon (click)="onClose()" size="large" name="close-outline"></ion-icon></li>
 
+  </ul>
+</div>
 
-<ion-popover trigger="click-trigger" triggerAction="click">
+<ion-popover #popover [isOpen]="isOpen" (didDismiss)="isOpen = false">
   <ng-template>
     <ul class="pop">
       <li [routerLink]="['/chat-info']">Chat Info</li>
       <li expand="block" (click)="setOpen(true)">Rate the chat</li>
       <li id="context-menu-trigger">Leave Chat</li>
       <li [routerLink]="['/report']">Report Chat</li>
+      <li (click)="deleteAllChat()">Clear Chat</li>
     </ul>
   </ng-template>
 </ion-popover>
@@ -47,22 +58,32 @@
 </ion-popover>
 
 <ion-content>
-  <div class="messages" #scrollMe>
+  <div class="messages" #scrollMe *ngIf="messageThread.length > 0">
     <!-- receiver chat  -->
-    <span *ngFor="let message of messageThread">
-      
-    <div class="in" *ngIf="message.receiver_id == currentUser">
+    <span *ngFor="let message of messageThread; trackBy: trackItem;let i = index;">
+    <div class="in" (click)="onClick(i, message)" *ngIf="message.receiver_id == currentUser">
       <h6 class="user">Guest  {{message.created_on | timeAgo}}</h6>
 
       <p>
         {{message.message}}
       </p>
+      <div class="react" *ngIf="showButtons && clickedIndex == i">
+        <ul>
+          <li  *ngFor="let smily of obj">
+            <ngx-emoji   emoji="{{smily.name}}" (click)="getEmoji(smily.name, message, i)" size="24" [fallback]="emojiFallback"></ngx-emoji>
+          </li>
+        </ul>
+      </div>
+      <app-reaction [selectedValue]="reaction" *ngIf="setClickedIndex == i" [message]="message"></app-reaction>
+      <app-reaction *ngIf="setClickedIndex !== i" [message]="message"></app-reaction>
+      <div *ngIf="showButtons && clickedIndex == i"  class="select"></div>
     </div>
-    <!-- sender chat -->
+    
     <div class="out" *ngIf="message.sender_id == currentUser">
       <p>
         {{message.message}}
       </p>
+      <app-reaction [message]="message" class="out-reaction"></app-reaction>
     </div>
     </span>
   </div>
@@ -74,20 +95,22 @@
 
 <div class="appi-footer">
   <div class="sendMessage">
-    <input class="messageInput" (keyup.enter)="sendMessage()" [(ngModel)]="text" type="text" placeholder="Type your message..." />
+    <input class="messageInput" (click)="pasteText()" (keyup.enter)="sendMessage()" [(ngModel)]="text" type="text" placeholder="Type your message..." />
     <div class="icons">
       
       <ion-icon size="large"  (click)="sendMessage()" [ngClass]="text ? '' : 'hidden' " name="send-sharp"></ion-icon>
-      <ion-icon size="large" name="add-sharp"></ion-icon>
-      <ion-icon size="large" name="happy-sharp"></ion-icon>
+      <ion-icon size="large" name="add-sharp" (click)="openUploadOption()"></ion-icon>
+      <ion-icon size="large" (click)="showEmojiPicker = !showEmojiPicker" name="happy-sharp"></ion-icon>
     </div>
   </div>
 </div>
-
+<div class="emojiContainer" [style.height]="showEmojiPicker?'300px':'0px'"> <!--Show/Hide emoji picker. Don't use *ngIf because the component will be created again and again and cause performance issue-->
+  <emoji-picker (onEmojiSelect)="addEmoji($event)"></emoji-picker>
+</div>
 
 <!-- modal  -->
 
-<ion-modal [isOpen]="isModalOpen" #modal trigger="open-modal" [initialBreakpoint]="0.25"
+<!-- <ion-modal [isOpen]="isModalOpen" #modal trigger="open-modal" [initialBreakpoint]="0.25"
   [breakpoints]="[0, 0.25, 0.5, 0.75]">
   <ng-template>
     <div class="modal-rating">
@@ -110,5 +133,5 @@
 
     </div>
   </ng-template>
-</ion-modal>
+</ion-modal> -->
 

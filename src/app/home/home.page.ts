@@ -25,11 +25,12 @@ export class HomePage implements OnInit {
   ionViewWillEnter() {
     this.userID = localStorage.getItem('userID');
       let chat = new FormData();
-      chat.append('id', this.userID);
-      this.auth.common('users/allRegisteredUserExceptLogin',chat).subscribe(
+      chat.append('login_id', this.userID);
+      this.auth.common('conversation/recentChats',chat).subscribe(
         (res: any) => {
           if (res) {
-            this.chatList = res; 
+            this.chatList = res['data']; 
+            console.log(this.chatList);
           } else {
             this.chatList = [];
           }

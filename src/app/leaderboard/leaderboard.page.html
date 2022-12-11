@@ -18,15 +18,24 @@
         <div class="d-flex">
           <h3 class="text-medium">Top Chats</h3>
           <div class="search">
-           <img src="../../assets/search.png" alt="">
+           <img src="assets/search.png" alt="">
           </div>
         </div>
           <ul *ngFor="let c of count">
             <li class="mb-3" [routerLink]="['/one-page']">
               <div class="list">
-                <div class="pimg">G <div class="active"></div></div>
-                <div class="name"><h4>Guest 765</h4><p>Why did you do that? </p></div>
-                <div class="time"><p>12:30</p><div class="badge2">2</div></div>
+                <ion-row>
+                  <ion-col size="3">
+                    <div class="pimg">G <div class="active"></div></div>
+                  </ion-col>
+                  <ion-col size="6">
+                    <div class="name"><h4>Guest 765</h4><p>Why did you do that? </p></div>
+                  </ion-col>
+                  <ion-col size="3">
+                    <div class="time"><p>12:30</p><div class="badge2">2</div></div>
+                  </ion-col>
+                </ion-row>
+                
               </div>
             </li>
           </ul>
@@ -43,9 +52,18 @@
           <ul *ngFor="let c of count">
             <li class="mb-3" [routerLink]="['/one-page']" > 
               <div class="list">
-                <div class="pimg">G <div class="active"></div></div>
-                <div class="name"><h4>Guest 765</h4><p>Why did you do that? </p></div>
-                <div class="time"><p>12:30</p><div class="badge2">2</div></div>
+                <ion-row>
+                  <ion-col size="3">
+                    <div class="pimg">G <div class="active"></div></div>
+                  </ion-col>
+                  <ion-col size="6">
+                    <div class="name"><h4>Guest 765</h4><p>Why did you do that? </p></div>
+                  </ion-col>
+                  <ion-col size="3">
+                    <div class="time"><p>12:30</p><div class="badge2">2</div></div>
+                  </ion-col>
+                </ion-row>
+                
               </div>
             </li>
           </ul>
@@ -61,10 +79,19 @@
         </div>
           <ul *ngFor="let c of count">
             <li class="mb-3" [routerLink]="['/one-page']">
-              <div class="list" >
-                <div class="pimg">G <div class="active"></div></div>
-                <div class="name"><h4>Guest 765</h4><p>Why did you do that? </p></div>
-                <div class="time"><p>12:30</p><div class="badge2">2</div></div>
+              <div class="list">
+                <ion-row>
+                  <ion-col size="3">
+                    <div class="pimg">G <div class="active"></div></div>
+                  </ion-col>
+                  <ion-col size="6">
+                    <div class="name"><h4>Guest 765</h4><p>Why did you do that? </p></div>
+                  </ion-col>
+                  <ion-col size="3">
+                    <div class="time"><p>12:30</p><div class="badge2">2</div></div>
+                  </ion-col>
+                </ion-row>
+                
               </div>
             </li>
           </ul>

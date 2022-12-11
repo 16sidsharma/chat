@@ -5,11 +5,11 @@
   <div class="d-flex">
     <h3 class="text-medium">Recent Chats</h3>
     <div class="search">
-     <img src="../../assets/search.png" alt="">
+     <img src="assets/search.png" alt="">
     </div>
   </div>
     <ul *ngFor="let c of chatList;let i = index;">
-      <app-last-message-thread [data]="c" [count]="i"></app-last-message-thread>
+      <app-last-message-thread [data]="c" [count]="i" [chatID]="userID == c.sender_id ? c.receiver_id : c.sender_id "></app-last-message-thread>
       <!-- <li class="mb-3" [routerLink]="['/one-page/', c.id]">
         <div class="list">
           <div class="pimg">G <div class="active"></div></div>

@@ -1,0 +1,6 @@
+<div class="smallEmoji" *ngIf="setEmoji.length > 0">
+  <span *ngFor="let emoj of setEmoji">
+  <ngx-emoji  emoji="{{emoj.reaction}}" size="20" [fallback]="emojiFallback"></ngx-emoji>
+  <span>{{emoj.total}}</span>
+</span>
+</div>

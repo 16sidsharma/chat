@@ -17,7 +17,8 @@ export class OnboardingOnePage implements OnInit {
 
   slideOpts = {
     initialSlide: 0,
-    speed: 400
+    speed: 400,
+    autoplay: true
   };
   next() {
     this.slides.slideNext();

@@ -8,14 +8,20 @@ import { OnePagePageRoutingModule } from './one-page-routing.module';
 
 import { OnePagePage } from './one-page.page';
 import {TimeAgoPipe} from 'time-ago-pipe';
+import { Ionic4EmojiPickerModule } from 'ionic4-emoji-picker';
+import { EmojiModule } from '@ctrl/ngx-emoji-mart/ngx-emoji';
+import { ReactionComponent } from '../component/reaction/reaction.component';
+import { Clipboard } from '@ionic-native/clipboard/ngx';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    OnePagePageRoutingModule
+    OnePagePageRoutingModule,
+    Ionic4EmojiPickerModule,
+    EmojiModule
   ],
-  declarations: [OnePagePage, TimeAgoPipe]
+  declarations: [OnePagePage, TimeAgoPipe, ReactionComponent]
 })
 export class OnePagePageModule {}

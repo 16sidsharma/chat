@@ -34,6 +34,7 @@
         </ion-list>
 
         <ion-list id="labels-list" class="selic">
+          <ion-label class="theme-label">Select Theme</ion-label>
           <ion-select class="newSelect" placeholder="Select colors" (ionChange)="handleChange($event);" [(ngModel)]="defaultTheme">
             <ion-select-option *ngFor="let c of colors" [value]="c.name">{{ c.diaplayName }}</ion-select-option>
           </ion-select>
@@ -55,6 +56,10 @@
 
         <ion-tab-button [routerLink]="['/chats']">
           <ion-icon name="chatbubbles-outline"></ion-icon>
+        </ion-tab-button>
+
+        <ion-tab-button [routerLink]="['/user-list']">
+          <ion-icon name="chatbox-outline"></ion-icon>
         </ion-tab-button>
       </ion-tab-bar>
 

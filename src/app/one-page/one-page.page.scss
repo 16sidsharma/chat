@@ -1,3 +1,4 @@
+@import '~@ctrl/ngx-emoji-mart/picker';
 .appli-head {
   width: 100%;
   height: 75px;
@@ -194,8 +195,8 @@ ion-icon {
 .messages {
   position: relative;
   padding: 10px;
-  height: 350px;
-  overflow: scroll;
+  height: 78%;
+  overflow: auto;
 
   .in {
     background: var(--ion-color-primary);
@@ -344,11 +345,96 @@ body[color-theme="dark"]  .appi-footer {
  
 }
 .messages .in :nth-child(2){
-  background: var(--ion-color-secondary!important);
+  background: var(--ion-color-secondary !important);
 }
 .messageInput {
     outline: none;
 }
 .hidden {
   display: none;
+}
+.emojiContainer{
+  background : #f4f5f8;
+}
+
+.heade-to {
+  background-color: var(--ion-color-primary);
+
+}
+
+.ioco ion-icon {
+  font-size: 54px;
+  color: #fff !important;
+}
+
+.react {
+  position: absolute;
+  // width: 54%;
+  bottom: 36px;
+  display: flex;
+  animation: gelatine 1s ease;
+  z-index: 1;
+
+  ul {
+    background: var(--ion-color-primary);
+    width: 100%;
+    height: 59px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    box-shadow: 1px 1px 19px -3px black;
+    list-style: none;
+
+    li {
+      padding: 0px 10px;
+      transform: scale(1.1);
+      transition: .5s ease-in-out;
+    }
+
+    li:hover {
+      transform: scale(1.5);
+    }
+  }
+}
+
+.in {
+  position: relative;
+}
+
+@keyframes gelatine {
+
+  from,
+  to {
+    transform: scale(1, 1);
+  }
+
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+
+ngx-emoji{
+  animation: pop 1s ease-in;
+}
+
+@keyframes pop{
+  0%{transform: scale(0);}
+  100%{transform: scale(1);}
+
+}
+.select{
+  width: 100vw;
+  background: rgb(63 81 181 / 6%);
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  left: -21px;
 }

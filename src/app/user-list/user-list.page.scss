@@ -1,0 +1,127 @@
+.contain {
+    width: 317px;
+    border-radius: 16px;
+    margin-top: 60px;
+
+    .text {
+        font-family: 'poppins';
+        font-size: 14px;
+        color: #000;
+    }
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.165px;
+
+    color: #BABDC1;
+}
+
+ul {
+
+    padding: 0;
+}
+
+h3 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    /* identical to box height */
+
+    letter-spacing: -0.165px;
+
+    color: #131313;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.list {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    // flex-direction: column;
+    p {
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}
+
+.pimg {
+    background: rgba(255, 255, 255, 0.36);
+    border: 1px solid #ECECEC;
+    border-radius: 37.5px;
+
+    span {
+        width: 3px;
+        height: 3px;
+        background-color: blue;
+        border: 1px solid #fff;
+        border-radius: 50%;
+    }
+}
+
+h4 {
+    margin: 0px;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.165px;
+
+    color: #BABDC1;
+}
+
+.pimg {
+    width: 56px;
+    height: 54.85px;
+    border-radius: 50%;
+    font-size: 16px;
+    text-align: center;
+    color: #ECECEC;
+    padding-top: 15px;
+    position: relative;
+
+    .active {
+        width: 9px;
+        height: 9px;
+        background-color: #2675EC;
+        border-radius: 4px;
+        position: absolute;
+        bottom: 1;
+        right: 3px;
+
+    }
+}
+
+.name {
+    margin: 2px;
+    width: 140px;
+    padding-top: 10px;
+}
