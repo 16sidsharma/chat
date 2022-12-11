@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  mainUrl: 'https://mcare.mhatkerala.org/chat-api',
-  appUrl: 'https://mcare.mhatkerala.org/chat-api/Api/',
+  mainUrl: '',
+  appUrl: '',
 };
 
 /*
